@@ -11,7 +11,7 @@
 
 body {
     background: #050510;
-    font-family: 'Orbitron', 'Segoe UI', sans-serif;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
     color: var(--text-color);
     margin: 0;
     padding: 0;
@@ -44,14 +44,13 @@ body {
 
 h2 {
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 6px;
     background: linear-gradient(to right, #00d2ff, #9d50bb);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2.5rem;
     margin-bottom: 40px;
     filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.3));
+    font-weight: 700;
 }
 
 /* New Feature: Search & Stats Bar */
@@ -79,6 +78,7 @@ h2 {
     color: white;
     outline: none;
     transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
 }
 
 .search-box input:focus {
@@ -110,16 +110,15 @@ h2 {
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 600;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 14px;
     position: relative;
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-primary {
@@ -170,9 +169,8 @@ th {
     padding: 15px;
     text-align: left;
     color: var(--accent-color);
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 tbody tr {
@@ -201,9 +199,8 @@ label {
     display: block;
     margin-bottom: 10px;
     color: var(--accent-color);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 input[type="text"] {
@@ -216,6 +213,7 @@ input[type="text"] {
     outline: none;
     transition: 0.3s;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 input[type="text"]:focus {
