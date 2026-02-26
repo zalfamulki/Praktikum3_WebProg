@@ -31,31 +31,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Mahasiswa | Sistem Futuristik</title>
+    <title>MODIFY DATA | CORE SYSTEM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container" style="max-width: 500px;">
-        <h2>Edit Mahasiswa</h2>
+        <h2>Modify Entry</h2>
         <form method="POST" action="">
             <div class="form-group">
-                <label>NIM</label>
-                <input type="text" name="npm" value="<?= htmlspecialchars($data['npm']); ?>" required autofocus>
+                <label>NIM Identification</label>
+                <input type="text" name="npm" value="<?= htmlspecialchars($data['npm']); ?>" required>
             </div>
             <div class="form-group">
-                <label>Nama Lengkap</label>
+                <label>Subject Name</label>
                 <input type="text" name="nama" value="<?= htmlspecialchars($data['nama']); ?>" required>
             </div>
             <div class="form-group">
-                <label>Jurusan</label>
+                <label>Department / Major</label>
                 <input type="text" name="jurusan" value="<?= htmlspecialchars($data['jurusan']); ?>" required>
             </div>
             
-            <div style="margin-top: 30px; display: flex; gap: 10px;">
-                <button type="submit" class="btn btn-primary" style="flex: 1; border: none;">Update Data</button>
-                <a href="index.php" class="btn btn-delete" style="text-align: center;">Batal</a>
+            <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 15px;">
+                <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">Confirm Changes</button>
+                <a href="index.php" class="btn btn-delete" style="justify-content: center;">Cancel Operation</a>
             </div>
         </form>
     </div>
+    <script src="particles.js"></script>
 </body>
 </html>
