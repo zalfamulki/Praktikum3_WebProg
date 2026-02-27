@@ -14,6 +14,7 @@ $total = count($mahasiswa);
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php include 'sidebar.php'; ?>
     <div class="container">
         <h2>Database Mahasiswa</h2>
         

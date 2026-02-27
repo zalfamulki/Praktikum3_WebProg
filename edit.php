@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <?php include 'sidebar.php'; ?>
     <div class="container" style="max-width: 500px;">
         <h2>Modify Entry</h2>
         <form method="POST" action="">

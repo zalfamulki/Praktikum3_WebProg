@@ -1,7 +1,5 @@
 <?php
 require 'connection.php';
-
-// Mengambil total statistik
 $totalMhs = $pdo->query("SELECT count(*) FROM mahasiswa")->fetchColumn();
 $totalDosen = $pdo->query("SELECT count(*) FROM dosen")->fetchColumn();
 $totalMK = $pdo->query("SELECT count(*) FROM matakuliah")->fetchColumn();
@@ -11,55 +9,37 @@ $totalMK = $pdo->query("SELECT count(*) FROM matakuliah")->fetchColumn();
 <head>
     <meta charset="UTF-8">
     <title>DASHBOARD | CORE SYSTEM</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .grid-dashboard {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .nav-menu {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-bottom: 30px;
-        }
-    </style>
 </head>
 <body>
+    <?php include 'sidebar.php'; ?>
     <div class="container">
-        <h2>CORE ACADEMIC SYSTEM</h2>
+        <h2>SYSTEM ANALYTICS</h2>
         
-        <div class="nav-menu">
-            <a href="index.php" class="btn btn-primary">Data Mahasiswa</a>
-            <a href="dosen.php" class="btn btn-primary">Data Dosen</a>
-            <a href="matakuliah.php" class="btn btn-primary">Mata Kuliah</a>
-        </div>
-
-        <div class="grid-dashboard">
-            <div class="stats-card" style="padding: 30px; flex-direction: column; align-items: flex-start;">
-                <span style="font-size: 40px;">👥</span>
-                <div style="font-size: 14px; opacity: 0.7;">TOTAL STUDENTS</div>
-                <div style="font-size: 32px; font-weight: bold; color: var(--primary-color);"><?= $totalMhs ?></div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div class="stats-card">
+                <div>
+                    <div style="font-size: 10px; opacity: 0.7;">TOTAL STUDENTS</div>
+                    <div style="font-size: 24px; color: var(--primary-color); font-weight: bold;"><?= $totalMhs ?></div>
+                </div>
             </div>
-
-            <div class="stats-card" style="padding: 30px; flex-direction: column; align-items: flex-start; border-color: var(--secondary-color);">
-                <span style="font-size: 40px;">👨‍🏫</span>
-                <div style="font-size: 14px; opacity: 0.7;">ACTIVE LECTURERS</div>
-                <div style="font-size: 32px; font-weight: bold; color: var(--secondary-color);"><?= $totalDosen ?></div>
+            <div class="stats-card" style="border-color: var(--secondary-color);">
+                <div>
+                    <div style="font-size: 10px; opacity: 0.7;">ACTIVE FACULTY</div>
+                    <div style="font-size: 24px; color: var(--secondary-color); font-weight: bold;"><?= $totalDosen ?></div>
+                </div>
             </div>
-
-            <div class="stats-card" style="padding: 30px; flex-direction: column; align-items: flex-start; border-color: var(--accent-color);">
-                <span style="font-size: 40px;">📚</span>
-                <div style="font-size: 14px; opacity: 0.7;">TOTAL COURSES</div>
-                <div style="font-size: 32px; font-weight: bold; color: var(--accent-color);"><?= $totalMK ?></div>
+            <div class="stats-card" style="border-color: var(--accent-color);">
+                <div>
+                    <div style="font-size: 10px; opacity: 0.7;">COURSES READY</div>
+                    <div style="font-size: 24px; color: var(--accent-color); font-weight: bold;"><?= $totalMK ?></div>
+                </div>
             </div>
         </div>
 
-        <div style="margin-top: 50px; text-align: center; opacity: 0.5; font-size: 12px;">
-            <p>Sistem Akademik Terintegrasi &bull; Terminal v2.0.26</p>
+        <div style="margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.02); border-radius: 15px; border: 1px solid var(--glass-border);">
+            <h3 style="color: var(--primary-color);">System Logs</h3>
+            <p style="font-family: monospace; font-size: 13px; opacity: 0.6;">> Database connection established... [OK]<br>> Core system modules loaded... [OK]<br>> Particle engine running... [OK]</p>
         </div>
     </div>
     <script src="particles.js"></script>
