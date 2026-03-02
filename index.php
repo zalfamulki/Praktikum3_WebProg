@@ -39,7 +39,7 @@ $total = count($mahasiswa);
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>NIM</th>
+                    <th>NPM</th>
                     <th>Nama Mahasiswa</th>
                     <th>Jurusan</th>
                     <th style="text-align: center;">Control</th>
